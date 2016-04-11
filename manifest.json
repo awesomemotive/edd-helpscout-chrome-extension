@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "EDD Help Scout Autolink",
+  "description": "This extension will automatically convert specific text into a hyperlink.",
+  "version": "0.1",
+  "browser_action": {
+    "default_title": "EDD Help Scout Autolink"
+  },
+  "content_scripts": [{
+    "matches": ["https://secure.helpscout.net/*"],
+    "run_at": "document_end",
+    "js":      ["content.js"]
+
+  }],
+  "permissions": ["activeTab"]
+}
