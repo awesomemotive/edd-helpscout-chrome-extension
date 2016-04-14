@@ -1,7 +1,4 @@
-function eddConvertString() {
-    var x = document.getElementsByClassName("redactor_editor");
-    var i;
-    var ii;
+function eddStrings() {
     var strings = [
         "trusted consultants",
         "edd commissions",
@@ -20,6 +17,9 @@ function eddConvertString() {
         "edd stripe",
         "paypal adaptive payments"
     ];
+    return strings;
+}
+function eddURLs() {
     var urls = [
         "https://easydigitaldownloads.com/consultants/",
         "https://easydigitaldownloads.com/downloads/commissions/",
@@ -38,9 +38,17 @@ function eddConvertString() {
         "https://easydigitaldownloads.com/downloads/stripe/",
         "https://easydigitaldownloads.com/downloads/paypal-adaptive-payments/"
     ];
+    return urls;
+}
+function eddConvertString() {
+    var x = document.getElementsByClassName("redactor_editor");
+    var strings = eddStrings();
+    var urls = eddURLs();
+    var i;
+    var ii;
     for (i = 0; i < x.length; i++) {
         for (ii = 0; ii < strings.length; ii++) {
-            if ( x[i].innerHTML.indexOf( " " + strings[ii]) > -1 ) {
+            if (x[i].innerHTML.indexOf(" " + strings[ii]) > -1) {
                 x[i].innerHTML = x[i].innerHTML.replace(strings[ii], eddLink(strings[ii], urls[ii]));
                 placeCaretAtEnd(x[0]);
             }
@@ -49,15 +57,17 @@ function eddConvertString() {
 }
 function eddLoad() {
     var ticket = document.getElementById("wrap");
-    ticket.addEventListener("keypress", eddConvertString);
+    if (ticket != null) {
+        ticket.addEventListener("keypress", eddConvertString);
+    }
 }
-function eddLink( string, url ) {
+function eddLink(string, url) {
     var url = "<a href='" + url + "'>" + string + "</a>";
     return url;
 
 }
 // copied from http://stackoverflow.com/a/4238971
-function placeCaretAtEnd( el ) {
+function placeCaretAtEnd(el) {
     el.focus();
     if (typeof window.getSelection != "undefined"
         && typeof document.createRange != "undefined") {
@@ -74,4 +84,14 @@ function placeCaretAtEnd( el ) {
         textRange.select();
     }
 }
-document.onload = eddLoad();
+function eddListStrings() {
+    var strings = eddStrings();
+    var urls = eddURLs();
+    var output = '<br/>';
+    var i;
+    for (i = 0; i < strings.length; i++) {
+        output = output + "<a href='" + urls[i] + "'>" + strings[i] + "</a><br/>";
+    }
+    document.getElementById("eddstringlist").innerHTML = output;
+}
+document.onload = eddLoad() + eddListStrings();

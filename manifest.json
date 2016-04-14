@@ -5,7 +5,9 @@
   "description": "This extension will automatically convert specific text into a hyperlink.",
   "version": "0.1.1",
   "browser_action": {
-    "default_title": "EDD Help Scout Autolink"
+    "default_title": "EDD Help Scout Autolink",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
   },
   "content_scripts": [{
     "matches": ["https://secure.helpscout.net/*"],
