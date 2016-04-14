@@ -87,11 +87,14 @@ function placeCaretAtEnd(el) {
 function eddListStrings() {
     var strings = eddStrings();
     var urls = eddURLs();
+    var gohere = document.getElementById( "eddstringlist" );
     var output = '<br/>';
     var i;
     for (i = 0; i < strings.length; i++) {
         output = output + "<a href='" + urls[i] + "'>" + strings[i] + "</a><br/>";
     }
-    document.getElementById("eddstringlist").innerHTML = output;
+    if ( gohere != null ) {
+         gohere.innerHTML = output;
+    }
 }
 document.onload = eddLoad() + eddListStrings();
