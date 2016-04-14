@@ -11,3 +11,5 @@ To run this extension:
 3. In Chrome, go to `chrome://extensions` and turn on developer mode
 4. Hit the Load Unpacked Extension button and select the project folder
 5. That's pretty much it
+
+# Changelog
