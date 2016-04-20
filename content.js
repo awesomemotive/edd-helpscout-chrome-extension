@@ -17,7 +17,9 @@ function eddStrings() {
         "edd stripe",
         "paypal adaptive payments",
 		"simple shipping",
-        "downloads as services"
+        "downloads as services",
+		"EDD Purchase Limits",
+		"purchase limits"
 
     ];
     return strings;
@@ -41,7 +43,9 @@ function eddURLs() {
         "https://easydigitaldownloads.com/downloads/stripe/",
         "https://easydigitaldownloads.com/downloads/paypal-adaptive-payments/",
 		"https://easydigitaldownloads.com/downloads/simple-shipping/",
-        "https://easydigitaldownloads.com/downloads/downloads-as-services/"
+        "https://easydigitaldownloads.com/downloads/downloads-as-services/",
+		"https://easydigitaldownloads.com/downloads/purchase-limit/",
+		"https://easydigitaldownloads.com/downloads/purchase-limit/"
     ];
     return urls;
 }
