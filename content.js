@@ -16,7 +16,9 @@ function eddStrings() {
         "fraud monitor",
         "edd stripe",
         "paypal adaptive payments",
-		"simple shipping"
+		"simple shipping",
+		"EDD Purchase Limits",
+		"purchase limits"
     ];
     return strings;
 }
@@ -38,7 +40,9 @@ function eddURLs() {
         "https://easydigitaldownloads.com/downloads/fraud-monitor/",
         "https://easydigitaldownloads.com/downloads/stripe/",
         "https://easydigitaldownloads.com/downloads/paypal-adaptive-payments/",
-		"https://easydigitaldownloads.com/downloads/simple-shipping/"
+		"https://easydigitaldownloads.com/downloads/simple-shipping/",
+		"https://easydigitaldownloads.com/downloads/purchase-limit/",
+		"https://easydigitaldownloads.com/downloads/purchase-limit/"
     ];
     return urls;
 }
