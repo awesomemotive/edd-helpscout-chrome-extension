@@ -19,7 +19,9 @@ function eddStrings() {
 		"simple shipping",
         "downloads as services",
 		"EDD Purchase Limits",
-		"purchase limits"
+		"purchase limits",
+		"Content Restriction",
+		"content restriction",
 
     ];
     return strings;
@@ -45,7 +47,9 @@ function eddURLs() {
 		"https://easydigitaldownloads.com/downloads/simple-shipping/",
         "https://easydigitaldownloads.com/downloads/downloads-as-services/",
 		"https://easydigitaldownloads.com/downloads/purchase-limit/",
-		"https://easydigitaldownloads.com/downloads/purchase-limit/"
+		"https://easydigitaldownloads.com/downloads/purchase-limit/",
+		"https://easydigitaldownloads.com/downloads/content-restriction/",
+		"https://easydigitaldownloads.com/downloads/content-restriction/"
     ];
     return urls;
 }
